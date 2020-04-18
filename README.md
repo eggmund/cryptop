@@ -5,3 +5,7 @@
 ### Configuring:
 
 The config file is located in `./config.yaml`.
+
+### TODO:
+- An actual GUI
+- Plan out layout.
