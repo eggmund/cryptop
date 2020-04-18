@@ -4,7 +4,7 @@
 
 First layout idea:
 
-![layout_1](https://github.com/eggmund/cryptop/tree/master/ideas/layout/layout_1.png)
+![Layout 1](https://github.com/eggmund/cryptop/tree/master/ideas/layout/layout_1.png?raw=true "Layout idea 1")
 
 
 ### Configuring:
