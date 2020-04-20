@@ -16,3 +16,4 @@ The config file is located in `./config.yaml`.
 ### TODO:
 - Add an actual GUI.
 - Plan out layout.
+- Candlestick chart.
