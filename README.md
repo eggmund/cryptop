@@ -1,5 +1,7 @@
 # cryptop
 
+WARNING: WIP Awful do not use.
+
 `top` style terminal tool for watching prices of cryptocurrencies.
 
 First layout idea:
@@ -12,5 +14,5 @@ First layout idea:
 The config file is located in `./config.yaml`.
 
 ### TODO:
-- An actual GUI
+- Add an actual GUI.
 - Plan out layout.

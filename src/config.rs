@@ -1,21 +1,21 @@
 use yaml_rust::Yaml;
 use std::path::Path;
-use std::fmt::Display;
 
 #[derive(Debug)]
 pub struct Config {
-    symbol: String,
+    pub symbol: String,             // Symbol of pair to watch
+    pub candle_interval: String,    // Time interval of candles
 }
 
 impl Config {
-    pub fn from_path<P: AsRef<Path> + Display>(path: P) -> Config {
+    pub fn from_path<P: AsRef<Path>>(path: P) -> Config {
         use yaml_rust::YamlLoader;
         use std::fs;
         use std::io::Read;
     
         let mut conf_file_string = String::new();
         fs::File::open(path)
-            .expect(&format!("Could not find config file."))
+            .expect("Could not find config file.")
             .read_to_string(&mut conf_file_string)
             .expect("Could not read config file to string.");
         
@@ -30,7 +30,9 @@ impl From<&Yaml> for Config {
     fn from(conf: &Yaml) -> Config {
         Config {
             symbol: conf["symbol"].as_str()
-                .expect("Could not parse 'symbol' field as string in config file.").into(),
+                .expect("Could not parse 'symbol' field as string from config file.").into(),
+            candle_interval: conf["candle_interval"].as_str()
+                .expect("Could not parse 'candle_interval' as string from config file.").into(),
         }
     }
 }
